@@ -12,19 +12,19 @@ int main() {
     float newtotal{}; // Declare newtotal here
 
     while (std::toupper(runCalc) == 'Y') { // Moved while loop here
-        std::cout << "\nPlease Enter Total Price: ";
+        std::cout << "\nPlease Enter Total Price: $";
         std::cin >> total;
         if (!checkInput(total)) // Validate user input
             continue; // Restart the loop if input is invalid
 
-        std::cout << "\nPlease Enter Tip Amount: "; // Moved inside the loop
+        std::cout << "\nPlease Enter Tip Amount: $"; // Moved inside the loop
         std::cin >> tip;
         if (!checkInput(tip))
             continue;
 
         newtotal = total + tip; // Calculate new total
 
-        std::cout << "\nYour New Total is: " << newtotal << std::endl;
+        std::cout << "\nYour New Total is: $" << newtotal << std::endl;
 
         // Prompt user if they want to calculate another tip
         std::cout << "\nWould You Like to Calculate Another Tip? (Y/N): ";
